@@ -62,6 +62,11 @@ PRODUCT_COPY_FILES += \
 # Boot animation
 -include vendor/deso/config/bootanimation.mk
 
+# Chromium prebuilt
+ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+-include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
+endif
+
 # SuperSU updater
 -include vendor/deso/config/supersu.mk
 
