@@ -1,4 +1,4 @@
-for combo in $(curl -s https://raw.githubusercontent.com/Plain-Andy-legacy/build-targets/lp-legacy/plain-build-targets | sed -e 's/#.*$//' | awk {'print $1'})
+for combo in $(curl -s https://raw.githubusercontent.com/DesolationRom/build-targets/lp/deso-build-targets | sed -e 's/#.*$//' | awk {'print $1'})
 do
- add_lunch_combo plain_$(echo $combo)-userdebug
+ add_lunch_combo deso_$(echo $combo)-userdebug
 done

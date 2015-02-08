@@ -1,7 +1,7 @@
 # Versioning of the ROM
 
 TARGET_PRODUCT_SHORT := $(TARGET_PRODUCT)
-TARGET_PRODUCT_SHORT := $(subst plain_,,$(TARGET_PRODUCT_SHORT))
+TARGET_PRODUCT_SHORT := $(subst deso_,,$(TARGET_PRODUCT_SHORT))
 
 ROM_VERSION_MAJOR := 15
 ROM_VERSION_MINOR := 1
@@ -39,5 +39,5 @@ PLAIN_VERSION := $(ROM_BUILDTYPE)
 # Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.modversion=Plain-Andy-$(TARGET_PRODUCT_SHORT) \
-	ro.plain.version=$(ROM_VERSION) \
+	ro.deso.version=$(ROM_VERSION) \
 	rom.buildtype=$(ROM_BUILDTYPE)

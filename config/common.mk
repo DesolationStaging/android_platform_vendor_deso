@@ -1,4 +1,4 @@
-PRODUCT_BRAND ?= plain
+PRODUCT_BRAND ?= deso
 
 # general properties
 PRODUCT_PROPERTIES_OVERRIDE += \
@@ -21,40 +21,35 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.adb.secure=0 \
-	enable_plaintweak=true
+	enable_desotweak=true
 
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/plain/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/plain/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/plain/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
-    vendor/plain/prebuilt/bin/blacklist:system/addon.d/blacklist
+    vendor/deso/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/deso/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/deso/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
+    vendor/deso/prebuilt/bin/blacklist:system/addon.d/blacklist
 
 # init.d support
 PRODUCT_COPY_FILES += \
-	vendor/plain/prebuilt/bin/sysinit:system/bin/sysinit
+	vendor/deso/prebuilt/bin/sysinit:system/bin/sysinit
 
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/plain/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/deso/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
 
-# Init script file with plain extras
+# Init script file with deso extras
 PRODUCT_COPY_FILES += \
-    vendor/plain/prebuilt/etc/init.local.rc:root/init.aicp.rc \
-    vendor/plain/prebuilt/etc/init.plain.kerneltweak.sh:system/etc/init.plain.kerneltweak.sh \
-    vendor/plain/prebuilt/bin/plaintweak:system/bin/plaintweak \
-    vendor/plain/prebuilt/bin/bootanitoggle:system/bin/bootanitoggle \
-    vendor/plain/prebuilt/etc/init.d/99customanimation:/system/etc/init.d/99customanimation \
-    vendor/plain/prebuilt/etc/init.d/91customdensity:/system/etc/init.d/91customdensity \
-    vendor/plain/prebuilt/etc/init.d/92plainwatcher:/system/etc/init.d/92plainwatcher
+    vendor/deso/prebuilt/etc/init.local.rc:root/init.aicp.rc \
+    vendor/deso/prebuilt/etc/init.d/91customdensity:/system/etc/init.d/91customdensity
 
 #Add System rewriteable/read only scripts
 PRODUCT_COPY_FILES += \
-    vendor/plain/prebuilt/bin/sysrw:system/bin/sysrw  \
-    vendor/plain/prebuilt/bin/sysrw:system/bin/sysro
+    vendor/deso/prebuilt/bin/sysrw:system/bin/sysrw  \
+    vendor/deso/prebuilt/bin/sysrw:system/bin/sysro
 
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -62,21 +57,21 @@ PRODUCT_COPY_FILES += \
 
 # Signature compatibility validation from CM
 PRODUCT_COPY_FILES += \
-    vendor/plain/prebuilt/bin/otasigcheck.sh:system/bin/otasigcheck.sh
+    vendor/deso/prebuilt/bin/otasigcheck.sh:system/bin/otasigcheck.sh
 
 # Additional packages
--include vendor/plain/config/packages.mk
+-include vendor/deso/config/packages.mk
 
 # Versioning
--include vendor/plain/config/version.mk
+-include vendor/deso/config/version.mk
 
 # Chainfire SuperSU v2.36
--include vendor/plain/config/supersu.mk
+-include vendor/deso/config/supersu.mk
 
--include vendor/plain/sepolicy/sepolicy.mk
+-include vendor/deso/sepolicy/sepolicy.mk
 
 # Add our overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/plain/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/deso/overlay/common
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \

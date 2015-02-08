@@ -5,7 +5,7 @@
 # cyanogen
 # AOKP
 
-. $ANDROID_BUILD_TOP/vendor/plain/tools/colors
+. $ANDROID_BUILD_TOP/vendor/deso/tools/colors
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
 if [ -z "$OUT_TARGET_HOST" ]
@@ -46,7 +46,7 @@ if [ ! -f "$OTAPACKAGE" ]; then
 	exit 1
 fi
 
-OPTICHARGER=$ANDROID_BUILD_TOP/vendor/plain/tools/opticharger
+OPTICHARGER=$ANDROID_BUILD_TOP/vendor/deso/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 
@@ -99,10 +99,10 @@ echo -e
 
 # Determine what to name the new signed package
 
-MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $OUT/system/build.prop`-`sed -n -e'/ro\.plain\.version/s/^.*=//p' $OUT/system/build.prop`-`sed -n -e'/rom\.buildtype/s/^.*=//p' $OUT/system/build.prop` 
+MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $OUT/system/build.prop`-`sed -n -e'/ro\.deso\.version/s/^.*=//p' $OUT/system/build.prop`-`sed -n -e'/rom\.buildtype/s/^.*=//p' $OUT/system/build.prop` 
 if [ -n "$BUILDTYPE_RELEASE" ]
 then
-MODVERSION=Release-`sed -n -e'/ro\.plain\.version/s/^.*=//p' $OUT/system/build.prop`
+MODVERSION=Release-`sed -n -e'/ro\.deso\.version/s/^.*=//p' $OUT/system/build.prop`
 fi
 TARGET_PRODUCT_FINAL=`echo -e $TARGET_PRODUCT | cut -d '_' -f2`
 echo -e $CL_CYN"MODVERSION: $MODVERSION"$CL_RST

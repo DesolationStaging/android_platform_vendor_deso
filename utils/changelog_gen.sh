@@ -38,7 +38,7 @@ do
             proj_credit=LiquidSmooth
         elif [ "$origin" = "pa-legacy" ]; then
             proj_credit=Plain-Andy
-        elif [ "$origin" = "plain" ]; then
+        elif [ "$origin" = "deso" ]; then
             proj_credit=Plain-Andy
         else
             proj_credit="$origin"

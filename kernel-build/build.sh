@@ -110,7 +110,7 @@ cp $OUT/system/lib/modules/* $UPDATE_ROOT/system/lib/modules/*
 fi
 
 mkdir -p $UPDATE_ROOT/META-INF/com/google/android
-cp $ANDROID_BUILD_TOP/vendor/plain/kernel-build/update-binary $UPDATE_ROOT/META-INF/com/google/android
+cp $ANDROID_BUILD_TOP/vendor/deso/kernel-build/update-binary $UPDATE_ROOT/META-INF/com/google/android
 
 if [ ! -e $LOCAL_BUILD_DIR/kernel ]
 then
@@ -142,7 +142,7 @@ cp ./AnyKernel/* $UPDATE_ROOT/kernel
     cd $UPDATE_ROOT
     zip -r ../update.zip .
 )
-java -jar $ANDROID_BUILD_TOP/vendor/plain/kernel-build/signapk.jar $CERT $KEY $LOCAL_BUILD_DIR/update.zip $ZIP
+java -jar $ANDROID_BUILD_TOP/vendor/deso/kernel-build/signapk.jar $CERT $KEY $LOCAL_BUILD_DIR/update.zip $ZIP
 if [ ! -e $LOCAL_BUILD_DIR/kernel ]
 then
 make mrproper
