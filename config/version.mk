@@ -3,8 +3,8 @@
 TARGET_PRODUCT_SHORT := $(TARGET_PRODUCT)
 TARGET_PRODUCT_SHORT := $(subst deso_,,$(TARGET_PRODUCT_SHORT))
 
-ROM_VERSION_MAJOR := 15
-ROM_VERSION_MINOR := 1
+ROM_VERSION_MAJOR := 2015
+ROM_VERSION_MINOR := RC0
 
 ifdef BUILDTYPE_NIGHTLY
 	ROM_BUILDTYPE := Nightly
@@ -34,10 +34,10 @@ ifndef changelog_date
 	 changelog_date := $(shell date -d "2 weeks ago" '+%m-%d-%Y')
 endif
 
-PLAIN_VERSION := $(ROM_BUILDTYPE)
+DESO_VERSION := $(ROM_BUILDTYPE)
 
 # Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.modversion=Plain-Andy-$(TARGET_PRODUCT_SHORT) \
+	ro.modversion=Desolation-$(TARGET_PRODUCT_SHORT) \
 	ro.deso.version=$(ROM_VERSION) \
 	rom.buildtype=$(ROM_BUILDTYPE)
