@@ -1,0 +1,4 @@
+#!/system/bin/sh
+setprop firstbootnotify true
+sysrw
+rm -rf /system/etc/init.d/01firstbootnotify
