@@ -74,8 +74,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGE_OVERLAYS += vendor/deso/overlay/common
 
 # Stagefright FFMPEG plugin
-PRODUCT_PACKAGES += \
-    libstagefright_soft_ffmpegadec \
-    libstagefright_soft_ffmpegvdec \
-    libFFmpegExtractor \
-    libnamparser
+#PRODUCT_PACKAGES += \
+#    libstagefright_soft_ffmpegadec \
+#    libstagefright_soft_ffmpegvdec \
+#    libFFmpegExtractor \
+#    libnamparser
