@@ -1,21 +1,10 @@
 # Required packages
 PRODUCT_PACKAGES += \
-	SlimFileManager \
 	LatinIME \
-	VideoEditor \
-	VoiceDialer \
 	SoundRecorder \
-	Basic \
-	Superuser \
-	su \
 	BluetoothExt
 
-# Additional apps
-PRODUCT_PACKAGES += \
-	DashClock \
-	audio_effects.conf \
-	MonthCalendarWidget
-
+# Other packages
 PRODUCT_PACKAGES += \
 	CellBroadcastReceiver
 
@@ -34,4 +23,3 @@ PRODUCT_PACKAGES += \
 	ntfsfix \
 	ntfs-3g \
 	mkntfs
-

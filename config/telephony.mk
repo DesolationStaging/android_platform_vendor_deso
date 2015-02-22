@@ -4,7 +4,4 @@ PRODUCT_COPY_FILES += \
     vendor/deso/prebuilt/etc/spn-conf.xml:system/etc/spn-conf.xml
 
 PRODUCT_PACKAGES += \
-    Stk \
-    CellBroadcastReceiver \
-    VoiceDialer \
-    SoundRecorder
+    Stk

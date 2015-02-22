@@ -15,16 +15,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.root_access=3 \
 	persist.sys.strictmode.visual=0 \
 	persist.sys.strictmode.disable=1 \
-        ro.max.fling_velocity=14000 \
-        ro.min.fling_velocity=9000 \
-        persist.sys.scrollingcache=3
+    ro.max.fling_velocity=14000 \
+    ro.min.fling_velocity=9000 \
+    persist.sys.scrollingcache=3
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.adb.secure=0 \
 	enable_desotweak=true
-
-# Embed SuperUser
-SUPERUSER_EMBEDDED := true
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
