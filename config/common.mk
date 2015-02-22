@@ -59,11 +59,14 @@ PRODUCT_COPY_FILES += \
 # Additional packages
 -include vendor/deso/config/packages.mk
 
-# Versioning
--include vendor/deso/config/version.mk
+# Boot animation
+-include vendor/deso/config/bootanimation.mk
 
-# Chainfire SuperSU v2.46
+# SuperSU updater
 -include vendor/deso/config/supersu.mk
+
+# ROM Versioning
+-include vendor/deso/config/version.mk
 
 -include vendor/deso/sepolicy/sepolicy.mk
 
