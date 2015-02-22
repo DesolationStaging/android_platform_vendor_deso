@@ -65,7 +65,7 @@ PRODUCT_COPY_FILES += \
 # Versioning
 -include vendor/deso/config/version.mk
 
-# Chainfire SuperSU v2.36
+# Chainfire SuperSU v2.46
 -include vendor/deso/config/supersu.mk
 
 -include vendor/deso/sepolicy/sepolicy.mk
