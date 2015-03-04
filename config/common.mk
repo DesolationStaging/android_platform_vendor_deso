@@ -40,8 +40,9 @@ PRODUCT_COPY_FILES += \
 
 # Init script file with deso extras
 PRODUCT_COPY_FILES += \
-    vendor/deso/prebuilt/etc/init.local.rc:root/init.aicp.rc \
-    vendor/deso/prebuilt/etc/init.d/91customdensity:/system/etc/init.d/91customdensity
+    vendor/deso/prebuilt/etc/init.local.rc:root/init.deso.rc \
+    vendor/deso/prebuilt/etc/init.d/91customdensity:system/etc/init.d/91customdensity \
+    vendor/deso/prebuilt/etc/init.d/01firstbootnotify:system/etc/init.d/01firstbootnotify
 
 #Add System rewriteable/read only scripts
 PRODUCT_COPY_FILES += \
