@@ -25,29 +25,29 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/deso/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/deso/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/deso/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
-    vendor/deso/prebuilt/bin/blacklist:system/addon.d/blacklist
+    vendor/deso/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/deso/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/deso/prebuilt/common/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
+    vendor/deso/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 # init.d support
 PRODUCT_COPY_FILES += \
-	vendor/deso/prebuilt/bin/sysinit:system/bin/sysinit
+	vendor/deso/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/deso/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/deso/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
 # Init script file with deso extras
 PRODUCT_COPY_FILES += \
-    vendor/deso/prebuilt/etc/init.local.rc:root/init.deso.rc \
-    vendor/deso/prebuilt/etc/init.d/91customdensity:system/etc/init.d/91customdensity \
-    vendor/deso/prebuilt/etc/init.d/01firstbootnotify:system/etc/init.d/01firstbootnotify
+    vendor/deso/prebuilt/common/etc/init.local.rc:root/init.deso.rc \
+    vendor/deso/prebuilt/common/etc/init.d/91customdensity:system/etc/init.d/91customdensity \
+    vendor/deso/prebuilt/common/etc/init.d/01firstbootnotify:system/etc/init.d/01firstbootnotify
 
 #Add System rewriteable/read only scripts
 PRODUCT_COPY_FILES += \
-    vendor/deso/prebuilt/bin/sysrw:system/bin/sysrw  \
-    vendor/deso/prebuilt/bin/sysrw:system/bin/sysro
+    vendor/deso/prebuilt/common/bin/sysrw:system/bin/sysrw  \
+    vendor/deso/prebuilt/common/bin/sysrw:system/bin/sysro
 
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -55,7 +55,7 @@ PRODUCT_COPY_FILES += \
 
 # Signature compatibility validation from CM
 PRODUCT_COPY_FILES += \
-    vendor/deso/prebuilt/bin/otasigcheck.sh:system/bin/otasigcheck.sh
+    vendor/deso/prebuilt/common/bin/otasigcheck.sh:system/bin/otasigcheck.sh
 
 # Additional packages
 -include vendor/deso/config/packages.mk
@@ -70,7 +70,7 @@ endif
 
 # Layers prebuilt
 PRODUCT_COPY_FILES += \
-    vendor/deso/prebuilt/app/Layers.apk:system/app/Layers/Layers.apk
+    vendor/deso/prebuilt/common/app/Layers.apk:system/app/Layers/Layers.apk
 
 # SuperSU updater
 -include vendor/deso/config/supersu.mk
