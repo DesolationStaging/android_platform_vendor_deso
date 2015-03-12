@@ -68,10 +68,6 @@ ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
 -include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
 endif
 
-# Layers prebuilt
-PRODUCT_COPY_FILES += \
-    vendor/deso/prebuilt/common/app/Layers.apk:system/app/Layers/Layers.apk
-
 # SuperSU updater
 -include vendor/deso/config/supersu.mk
 
