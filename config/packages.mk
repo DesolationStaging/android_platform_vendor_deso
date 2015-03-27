@@ -23,8 +23,3 @@ PRODUCT_PACKAGES += \
 	ntfsfix \
 	ntfs-3g \
 	mkntfs
-
-# CM Hardware
-PRODUCT_PACKAGES += \
-    org.cyanogenmod.hardware \
-    org.cyanogenmod.hardware.xml
