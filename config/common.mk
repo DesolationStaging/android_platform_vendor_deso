@@ -17,7 +17,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.strictmode.disable=1 \
     ro.max.fling_velocity=14000 \
     ro.min.fling_velocity=9000 \
-    persist.sys.scrollingcache=3
+    persist.sys.scrollingcache=3 \
+    ro.setupwizard.network_required=false \
+    ro.setupwizard.gservices_delay=-1
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.adb.secure=0 \
