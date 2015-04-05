@@ -19,7 +19,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.min.fling_velocity=9000 \
     persist.sys.scrollingcache=3 \
     ro.setupwizard.network_required=false \
-    ro.setupwizard.gservices_delay=-1
+    ro.setupwizard.gservices_delay=-1 \
+    dalvik.vm.image-dex2oat-filter=everything \
+    dalvik.vm.dex2oat-filter=everything
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.adb.secure=0 \
