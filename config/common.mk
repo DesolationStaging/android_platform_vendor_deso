@@ -13,16 +13,7 @@ PRODUCT_PROPERTIES_OVERRIDE += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.build.selinux=1 \
 	persist.sys.root_access=3 \
-	ro.min.fling_velocity=8000 \
-	ro.max.fling_velocity=12000 \
-	persist.sys.scrollingcache=4 \
-	persist.sys.strictmode.visual=0 \
-	persist.sys.strictmode.disable=1 \
-	windowsmgr.max_events_per_sec=250 \
-	ro.setupwizard.gservices_delay=-1 \
-	persist.sys.smoothscrollbar = true \
 	dalvik.vm.dex2oat-filter=everything \
-    ro.setupwizard.network_required=false \
     dalvik.vm.image-dex2oat-filter=everything
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
