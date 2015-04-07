@@ -46,10 +46,6 @@ PRODUCT_COPY_FILES += \
     vendor/deso/prebuilt/common/bin/sysrw:system/bin/sysrw  \
     vendor/deso/prebuilt/common/bin/sysrw:system/bin/sysro
 
-# Copy latinime for gesture typing
-PRODUCT_COPY_FILES += \
-    vendor/deso/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
-
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
