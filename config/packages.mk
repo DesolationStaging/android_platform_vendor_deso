@@ -1,9 +1,7 @@
 # Required packages
 PRODUCT_PACKAGES += \
-    Eleven \
 	LatinIME \
-	SoundRecorder \
-	BluetoothExt
+	SoundRecorder
 
 # Other packages
 PRODUCT_PACKAGES += \
