@@ -22,7 +22,7 @@ endif
 ROM_VERSION := $(shell date -u +%m.%d).$(BUILD_ID)
 
 ifdef BUILDTYPE_RELEASE
-	ROM_BUILDTYPE := Release 
+	ROM_BUILDTYPE := Release
 	ROM_VERSION := $(BUILD_ID)-v$(ROM_VERSION_MAJOR).$(ROM_VERSION_MINOR)-$(TARGET_PRODUCT_SHORT)
 	changelog_date := $(shell date -d "1 month ago" '+%m-%d-%Y')
 endif
