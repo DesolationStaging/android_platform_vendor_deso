@@ -5,3 +5,5 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     Stk
+
+-include vendor/deso/config/common.mk
