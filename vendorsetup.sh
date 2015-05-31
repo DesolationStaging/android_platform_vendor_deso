@@ -1,6 +1,6 @@
 clear
 echo -e "Current Official devices are as follows:"
-for combo in $(curl -s https://raw.githubusercontent.com/DesolationRom/build-targets/lp/deso-build-targets | sed -e 's/#.*$//' | awk {'print $1'})
+for combo in $(curl -s https://raw.githubusercontent.com/DesolationRom/build-targets/lp5.1-legacy/deso-build-targets | sed -e 's/#.*$//' | awk {'print $1'})
 do
  add_lunch_combo deso_$(echo $combo)-userdebug
  echo -e "\033[32m" $combo"\033[0m"
