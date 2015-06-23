@@ -17,15 +17,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.image-dex2oat-filter=everything
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
-	ro.adb.secure=0 \
-	enable_desotweak=true
+	ro.adb.secure=0
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/deso/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/deso/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/deso/prebuilt/common/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
-    vendor/deso/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+    vendor/deso/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions
 
 # init.d support
 PRODUCT_COPY_FILES += \
@@ -75,10 +72,11 @@ endif
 # SuperSU updater
 -include vendor/deso/config/supersu.mk
 
-# ROM Versioning
+# ROM version
 -include vendor/deso/config/version.mk
 
+# Include sepolicies
 -include vendor/deso/sepolicy/sepolicy.mk
 
-# Add our overlays
+# Add common overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/deso/overlay/common
