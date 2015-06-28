@@ -35,9 +35,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/deso/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
-# Init.d Run-Parts scripts
+# Binary Executable scripts
 PRODUCT_COPY_FILES += \
-    vendor/deso/prebuilt/common/etc/init.d/92bootanimwatcher:system/etc/init.d/92bootanimwatcher
+    vendor/deso/prebuilt/common/bin/bootanitoggle:system/bin/bootanitoggle
 
 # Init script file with deso extras
 PRODUCT_COPY_FILES += \
