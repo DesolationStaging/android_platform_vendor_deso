@@ -1,0 +1,15 @@
+#!/system/bin/sh
+sysrw
+if [ -e /vendor/build.prop ]
+	then
+		sed -i '/debug.sf.nobootanimation=/d' /vendor/build.prop
+fi
+
+if [ $(getprop persist.sys.deso.bootanim) == "0" ]
+	then
+		echo "debug.sf.nobootanimation=1" >> /vendor/build.prop
+	else
+		echo "debug.sf.nobootanimation=0" >> /vendor/build.prop
+fi
+
+sysro
