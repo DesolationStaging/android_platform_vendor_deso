@@ -10,7 +10,7 @@ TARGET_BOOTANIMATION_SIZE := $(shell \
   fi )
 
 # get a sorted list of the sizes
-bootanimation_sizes := $(subst .zip,, $(shell ls vendor/deso/prebuilt/common/bootanimation))
+bootanimation_sizes := $(subst .zip,, $(shell ls vendor/deso/prebuilt/common/custombootanimations/8bitarcade))
 bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_sizes)) | sort -rn)
 
 # find the appropriate size and set
@@ -28,6 +28,5 @@ $(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size
 
 # copy boot animation to system
 PRODUCT_COPY_FILES += \
-    vendor/deso/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
-    vendor/deso/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/vendor/bootanimations/stockbootani.zip
+    vendor/deso/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/vendor/bootanimations/8bitarcade.zip
 endif

@@ -37,7 +37,7 @@ PRODUCT_COPY_FILES += \
 
 # Binary Executable scripts
 PRODUCT_COPY_FILES += \
-    vendor/deso/prebuilt/common/bin/bootanitoggle:system/bin/bootanitoggle
+    vendor/deso/prebuilt/common/bin/bootani:system/bin/bootani
 
 # Init script file with deso extras
 PRODUCT_COPY_FILES += \
@@ -70,6 +70,9 @@ PRODUCT_COPY_FILES += \
 
 # Boot animation
 -include vendor/deso/config/bootanimation.mk
+
+# Custom BootAnimation Additions --Any additional Custom animations will be a 2 parter -1 part in Settings other in custombootanimations dir
+-include vendor/deso/prebuilt/common/custombootanimations/8bitarcadebootani.mk
 
 # Chromium prebuilt
 ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
