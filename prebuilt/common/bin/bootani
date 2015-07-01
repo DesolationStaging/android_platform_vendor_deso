@@ -1,5 +1,8 @@
 #!/system/bin/sh
-sysrw
+function writenew() {
+cp $(getprop persist.sys.deso.bootanimfile) /system/media/desoboot.zip
+}
+function toggle() {
 if [ -e /vendor/build.prop ]
 	then
 		sed -i '/debug.sf.nobootanimation=/d' /vendor/build.prop
@@ -11,5 +14,14 @@ if [ $(getprop persist.sys.deso.bootanim) == "0" ]
 	else
 		echo "debug.sf.nobootanimation=0" >> /vendor/build.prop
 fi
-
+}
+sysrw
+case "$1" in
+  toggle)
+	toggle
+  ;;
+  writenew)
+	writenew
+  ;;
+esac
 sysro
