@@ -28,6 +28,6 @@ $(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size
 
 # copy boot animation to system
 PRODUCT_COPY_FILES += \
-    vendor/deso/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
+    vendor/deso/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip \
     vendor/deso/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/vendor/bootanimations/stockbootani.zip
 endif
