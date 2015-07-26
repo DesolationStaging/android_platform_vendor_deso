@@ -74,11 +74,6 @@ PRODUCT_COPY_FILES += \
 # Custom BootAnimation Additions --Any additional Custom animations will be a 2 parter -1 part in Settings other in custombootanimations dir
 -include vendor/deso/prebuilt/common/custombootanimations/8bitarcadebootani.mk
 
-# Chromium prebuilt
-ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
--include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
-endif
-
 # SuperSU updater
 -include vendor/deso/config/supersu.mk
 
