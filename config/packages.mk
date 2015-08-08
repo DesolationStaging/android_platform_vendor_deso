@@ -21,4 +21,7 @@ PRODUCT_PACKAGES += \
 	lsof \
 	ntfsfix \
 	ntfs-3g \
-	mkntfs
+	mkntfs \
+	mount.exfat \
+	fsck.exfat \
+	mkfs.exfat
