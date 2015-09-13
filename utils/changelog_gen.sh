@@ -36,6 +36,10 @@ do
             proj_credit=DesolationRom
         elif [ "$origin" = "deso" ]; then
             proj_credit=DesolationRom
+        elif [ "$origin" = "br" ]; then
+            proj_credit=BenzoRom
+        elif [ "$origin" = "sr" ]; then
+            proj_credit=SlimRoms
         else
             proj_credit="$origin"
         fi
